@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "aa15aa9a-f1f6-42e8-bbd5-e3e35cf4bbff",
+		"name": "MusicArchiveService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Music",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"abc\",\n\"band\" : \"cde\",\n\"coverArtwork\" : \"fgh\",\n\"track\" : \"ijk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/musicAlbumsArchive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"musicAlbumsArchive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Music Album",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/musicAlbumsArchive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"musicAlbumsArchive"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
