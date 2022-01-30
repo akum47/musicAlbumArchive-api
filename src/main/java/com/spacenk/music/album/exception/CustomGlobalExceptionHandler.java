@@ -48,6 +48,14 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         return handleError(errorMessage, null, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(MusicAlbumAlreadyExistException.class)
+    public ResponseEntity<Object> handleMusicAlbumAlreadyExistException(
+            HttpServletRequest request, MusicAlbumAlreadyExistException ex
+    ) {
+        List<String> errorMessage = Arrays.asList(ex.getMessage());
+        return handleError(errorMessage, null, HttpStatus.BAD_REQUEST);
+    }
+
     ResponseEntity<Object> handleError(List<String> errorDetails, HttpHeaders headers, HttpStatus status) {
 
         Map<String, Object> body = new LinkedHashMap<>();
